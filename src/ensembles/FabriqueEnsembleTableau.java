@@ -7,5 +7,11 @@ public class FabriqueEnsembleTableau implements FabriqueEnsemble {
 		return new EnsembleTableauEntiers();
 	}
 
+	@Override
+	public Ensemble<Integer> nouveau() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

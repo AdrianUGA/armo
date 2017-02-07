@@ -16,4 +16,10 @@ public class FabriqueEnsembleByString implements FabriqueEnsemble{
 			this.factory = new FabriqueEnsembleListe();
 	}
 
+	@Override
+	public Ensemble<Integer> nouveau() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
