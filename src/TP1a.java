@@ -26,13 +26,13 @@
 
 import java.util.Random;
 
-import ensembles.EnsembleEntiers;
+import ensembles.Ensemble;
 import ensembles.FabriqueEnsembleListe;
 
 public class TP1a {
     static Random r;
 
-    static void testEnsemble(String [] args, EnsembleEntiers e) {
+    static void testEnsemble(String [] args, Ensemble<Integer> e) {
         if (args.length > 0) 
             r = new Random(Integer.parseInt(args[0]));
         else
@@ -61,9 +61,9 @@ public class TP1a {
     }
 
     public static void main(String [] args) throws Exception {
-        EnsembleEntiers e;
+        Ensemble<Integer> e;
         
-        e = (new FabriqueEnsembleListe()).getNew();
+        e = (new FabriqueEnsembleListe()).nouveau();
         testEnsemble(args, e);
     }
 }

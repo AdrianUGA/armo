@@ -7,8 +7,8 @@ import java.nio.file.FileSystems;
 import java.util.Properties;
 
 import ensembles.EnsembleEntiers;
-import ensembles.EnsembleListeEntiers;
-import ensembles.EnsembleTableauEntiers;
+import ensembles.EnsembleListe;
+import ensembles.EnsembleTableau;
 import exceptions.BadConfigurationException;
 
 public class PropertiesMain {
@@ -37,9 +37,9 @@ public class PropertiesMain {
 
 		for(int i=0; i<2; i++){
 			if(properties.getProperty(ensembleNames[i]).equals("Tableau")){
-				ensembleEntiers[i] = new EnsembleTableauEntiers();
+				ensembleEntiers[i] = new EnsembleTableau<Integer>();
 			}else if(properties.getProperty(ensembleNames[i]).equals("Liste")){
-				ensembleEntiers[i] = new EnsembleListeEntiers();
+				ensembleEntiers[i] = new EnsembleListe<Integer>();
 			}else{
 				throw new BadConfigurationException();
 			}

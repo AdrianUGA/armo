@@ -1,4 +1,4 @@
-import ensembles.EnsembleEntiers;
+import ensembles.Ensemble;
 import ensembles.FabriqueEnsembleTableau;
 
 /*
@@ -30,11 +30,11 @@ import ensembles.FabriqueEnsembleTableau;
 
 public class TP1b {    
     public static void main(String [] args) throws Exception {
-        EnsembleEntiers e;
+        Ensemble<Integer> e;
 
 
         TP1a.main(args);
-        e = (new FabriqueEnsembleTableau()).getNew();
+        e = (new FabriqueEnsembleTableau()).nouveau();
         TP1a.testEnsemble(args, e);
         
         
